@@ -1,0 +1,262 @@
+/* Contact Hero Banner */
+.contact-hero {
+  background: linear-gradient(rgba(3, 39, 69, 0.15) 0%, rgba(1, 21, 38, 0.4) 100%), 
+              url('https://images.unsplash.com/photo-1558021211-6d1403321394?auto=format&fit=crop&q=80&w=1600') no-repeat center center;
+  background-size: cover;
+  padding: 6rem 0;
+  color: var(--text-white);
+  text-align: center;
+  border-bottom: 3px solid var(--accent);
+}
+
+.contact-hero h1 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+}
+
+.contact-hero p {
+  color: var(--accent-light);
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+/* Contact Grid */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.contact-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-info-card {
+  background-color: var(--bg-cream);
+  border: 1px solid rgba(201, 184, 140, 0.25);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  transition: var(--transition);
+}
+
+.contact-info-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-card-icon {
+  font-size: 2.25rem;
+  flex-shrink: 0;
+}
+
+.contact-card-details h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.contact-card-details p {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.contact-form-panel {
+  background-color: var(--bg-white);
+  padding: 3.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+/* Vector Map styling */
+.map-section {
+  margin-top: 5rem;
+}
+
+.vector-map-container {
+  height: 400px;
+  background-color: #e5edf5;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--accent);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Stylized roads and grid */
+.map-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(3, 39, 69, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(3, 39, 69, 0.05) 1px, transparent 1px);
+  background-size: 25px 25px;
+}
+
+.map-road {
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.road-h1 {
+  top: 180px;
+  left: 0;
+  right: 0;
+  height: 40px;
+}
+
+.road-v1 {
+  left: 300px;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+}
+
+.road-v2 {
+  right: 250px;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+}
+
+/* Stylized landmarks */
+.map-landmark {
+  position: absolute;
+  background-color: #d1dfed;
+  border: 2px dashed rgba(3, 39, 69, 0.15);
+  border-radius: var(--radius-sm);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary-light);
+  text-align: center;
+}
+
+.landmark-temple {
+  top: 60px;
+  left: 80px;
+  width: 130px;
+  height: 70px;
+}
+
+.landmark-hospital {
+  bottom: 50px;
+  right: 50px;
+  width: 140px;
+  height: 80px;
+}
+
+.map-campus-block {
+  position: absolute;
+  top: 80px;
+  left: 380px;
+  right: 320px;
+  bottom: 100px;
+  background-color: var(--primary-dark);
+  border: 3px solid var(--accent);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--accent);
+  z-index: 5;
+  box-shadow: var(--shadow-lg);
+}
+
+.map-campus-title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.35rem;
+  margin-bottom: 0.25rem;
+}
+
+.map-campus-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-white);
+}
+
+.map-pin-glowing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  border: 3px solid var(--text-white);
+  z-index: 6;
+  animation: pulseGold 2s infinite;
+}
+
+.map-label-card {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: var(--primary);
+  color: var(--text-white);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--accent);
+  box-shadow: var(--shadow-md);
+  z-index: 10;
+  font-size: 0.9rem;
+}
+
+.map-label-card h4 {
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-form-panel {
+    padding: 2rem;
+  }
+  
+  .vector-map-container {
+    height: 300px;
+  }
+  
+  .map-campus-title {
+    font-size: 1.1rem;
+  }
+
+  .landmark-temple, .landmark-hospital {
+    display: none;
+  }
+  
+  .road-v2 {
+    display: none;
+  }
+
+  .map-campus-block {
+    left: 100px;
+    right: 50px;
+  }
+}

@@ -1,0 +1,255 @@
+/* About Header Banner */
+.about-hero {
+  background: linear-gradient(rgba(3, 39, 69, 0.15) 0%, rgba(1, 21, 38, 0.4) 100%), 
+              url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=1600') no-repeat center center;
+  background-size: cover;
+  padding: 6rem 0;
+  color: var(--text-white);
+  text-align: center;
+  border-bottom: 3px solid var(--accent);
+}
+
+.about-hero h1 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+}
+
+.about-hero p {
+  color: var(--accent-light);
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+/* History Section */
+.history-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.history-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.history-img-wrapper {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+.history-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Vision Mission Cards */
+.vision-mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.vision-card, .mission-card {
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-white);
+  border: 2px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.vision-card::before, .mission-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: var(--accent);
+}
+
+.vision-card:hover, .mission-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+/* Leadership Team Grid */
+.leaders-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.leader-card {
+  background-color: var(--bg-white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.leader-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
+}
+
+.leader-img-wrapper {
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--primary-dark);
+}
+
+.leader-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.leader-card:hover .leader-img {
+  transform: scale(1.05);
+}
+
+.leader-info {
+  padding: 1.5rem;
+  border-top: 2px solid var(--accent);
+}
+
+.leader-name {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+.leader-role {
+  font-size: 0.9rem;
+  color: var(--accent-dark);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+}
+
+.leader-bio {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* Campus Facilities Grid */
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.facility-card {
+  background-color: var(--bg-white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.facility-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent);
+}
+
+.facility-img-wrapper {
+  height: 180px;
+  overflow: hidden;
+}
+
+.facility-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.facility-card:hover .facility-img {
+  transform: scale(1.08);
+}
+
+.facility-info {
+  padding: 1.5rem;
+}
+
+.facility-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.facility-info p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .history-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .history-img {
+    height: 300px;
+  }
+
+  .vision-mission-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .leaders-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .facilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .leaders-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 3rem auto 0 auto;
+  }
+  
+  .facilities-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 3rem auto 0 auto;
+  }
+}

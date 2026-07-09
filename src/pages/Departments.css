@@ -1,0 +1,246 @@
+.departments-page {
+  background-color: var(--bg-white);
+}
+
+.departments-hero {
+  background: linear-gradient(rgba(3, 39, 69, 0.15) 0%, rgba(1, 21, 38, 0.4) 100%),
+              url('https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=1600') no-repeat center/cover;
+  padding: 6rem 0;
+  color: var(--text-white);
+  text-align: center;
+  border-bottom: 4px solid var(--accent);
+}
+
+.departments-hero h1 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+}
+
+.departments-hero p {
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+/* Department Section Card */
+.department-section {
+  display: grid;
+  grid-template-columns: 1.1fr 1.3fr;
+  gap: 3.5rem;
+  margin-bottom: 6rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid var(--border-color);
+  align-items: flex-start;
+}
+
+.department-section:last-child {
+  margin-bottom: 2rem;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.department-section.reverse {
+  grid-template-columns: 1.3fr 1.1fr;
+}
+
+.department-section.reverse .dept-image-block {
+  order: 2;
+}
+
+.department-section.reverse .dept-info-block {
+  order: 1;
+}
+
+/* Image Block */
+.dept-image-block {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(201, 184, 140, 0.3);
+  aspect-ratio: 4/3;
+}
+
+.dept-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.dept-image-block:hover .dept-image {
+  transform: scale(1.05);
+}
+
+.dept-badge {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background-color: var(--primary);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 0.4rem 1rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+}
+
+/* Info Block */
+.dept-meta {
+  color: var(--accent-dark);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.dept-info-block h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.dept-desc {
+  color: var(--text-main);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.dept-details-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  background-color: var(--bg-cream);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.dept-detail-item {
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+
+.dept-detail-item strong {
+  color: var(--primary-light);
+}
+
+.facilities-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.facility-tag {
+  background-color: rgba(201, 184, 140, 0.12);
+  color: var(--primary);
+  border: 1px solid rgba(201, 184, 140, 0.3);
+  padding: 0.35rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+}
+
+/* Courses table list */
+.courses-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--primary-light);
+  font-weight: 700;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.4rem;
+}
+
+.courses-list-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+}
+
+.courses-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.courses-table th {
+  background-color: var(--primary);
+  color: var(--accent);
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.courses-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.courses-table tr:last-child td {
+  border-bottom: none;
+}
+
+.courses-table tr:nth-child(even) {
+  background-color: #fafbfc;
+}
+
+/* Responsive adjustment */
+@media (max-width: 968px) {
+  .department-section,
+  .department-section.reverse {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    padding-bottom: 3rem;
+  }
+
+  .department-section.reverse .dept-image-block {
+    order: 1;
+  }
+  
+  .department-section.reverse .dept-info-block {
+    order: 2;
+  }
+
+  .dept-image-block {
+    aspect-ratio: 16/9;
+  }
+}
+
+@media (max-width: 768px) {
+  .dept-info-block h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .dept-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .courses-table {
+    min-width: 500px;
+  }
+
+  .dept-details-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+  }
+}
