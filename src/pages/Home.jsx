@@ -154,12 +154,39 @@ export default function Home() {
           <div key={idx} className={`hero-slide ${idx === currentSlide ? 'active' : ''}`}>
             <img src={slide.image} alt={slide.title} className="hero-bg" />
             <div className="hero-content">
-              <span className="hero-tagline">{slide.tagline}</span>
-              <h1 className="hero-title">{slide.title}</h1>
-              <p className="hero-desc">{slide.desc}</p>
-              <div className="hero-actions">
-                <Link to="/admissions" className="btn btn-accent">Apply Today</Link>
-                <Link to="/facilities" className="btn btn-outline-white">Explore Campus</Link>
+              <div className="hero-text-col">
+                <span className="hero-tagline">{slide.tagline}</span>
+                <h1 className="hero-title">{slide.title}</h1>
+                <p className="hero-desc">{slide.desc}</p>
+                <div className="hero-actions">
+                  <Link to="/admissions" className="btn btn-accent">Apply Today</Link>
+                  <Link to="/facilities" className="btn btn-outline-white">Explore Campus</Link>
+                </div>
+              </div>
+              
+              <div className="hero-poster-col">
+                <div className="banner-poster">
+                  <div className="poster-badge">Admissions Open 2026-27</div>
+                  <h4 className="poster-title">Shaping Leaders of Tomorrow</h4>
+                  <p className="poster-tagline">Unlock your potential by joining the SVES network of premier educational institutions.</p>
+                  <div className="poster-highlights">
+                    <div className="highlight-item">
+                      <span className="highlight-icon">🏆</span>
+                      <span>Top-tier placements with 100% assistance</span>
+                    </div>
+                    <div className="highlight-item">
+                      <span className="highlight-icon">🔬</span>
+                      <span>State-of-the-art labs and smart classrooms</span>
+                    </div>
+                    <div className="highlight-item">
+                      <span className="highlight-icon">🎓</span>
+                      <span>Merit-based scholarships up to 50%</span>
+                    </div>
+                  </div>
+                  <Link to="/admissions#enquiry-form" className="btn btn-accent poster-btn">
+                    Apply Online Now <span className="btn-arrow">➔</span>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

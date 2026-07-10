@@ -55,14 +55,35 @@
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: center;
   color: var(--text-white);
   padding: 0 4rem;
   max-width: 1280px;
   margin: 0 auto;
+}
+
+.hero-text-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-poster-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out 0.8s;
+}
+
+.hero-slide.active .hero-poster-col {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .hero-tagline {
@@ -538,8 +559,16 @@
   color: var(--accent-dark);
 }
 
-/* Responsive adjustments */
 @media (max-width: 1024px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hero-poster-col {
+    display: none;
+  }
+
   .welcome-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -627,5 +656,34 @@
 
   .testimonial-container {
     height: 320px;
+  }
+}
+
+/* Intermediate responsiveness for hero Admissions Poster */
+@media (max-width: 1200px) {
+  .hero-content {
+    gap: 1.5rem;
+    padding: 0 2rem;
+  }
+  
+  .banner-poster {
+    padding: 1.25rem !important;
+    gap: 0.6rem !important;
+  }
+  
+  .poster-title {
+    font-size: 1.35rem !important;
+  }
+  
+  .poster-tagline {
+    font-size: 0.85rem !important;
+  }
+  
+  .highlight-item {
+    font-size: 0.8rem !important;
+  }
+  
+  .highlight-icon {
+    font-size: 1rem !important;
   }
 }

@@ -173,30 +173,27 @@ export default function Admissions() {
             <span className="welcome-text-blue">Welcomes You !!!</span>
           </div>
 
-          {/* Right active announcements list */}
-          <div className="banner-announcements">
-            <a href="#enquiry-form" className="banner-announcement-item">
-              <span className="bell-icon">🔔</span>
-              <div className="ann-details">
-                <h4>Online Enquiry Form</h4>
-                <p>Register student profile, academic logs, and query details instantly.</p>
+          {/* Right side poster to join admissions */}
+          <div className="banner-poster">
+            <div className="poster-badge">Admissions Open 2026-27</div>
+            <h4 className="poster-title">Shaping Leaders of Tomorrow</h4>
+            <p className="poster-tagline">Unlock your potential by joining the SVES network of premier educational institutions.</p>
+            <div className="poster-highlights">
+              <div className="highlight-item">
+                <span className="highlight-icon">🏆</span>
+                <span>Top-tier placements with 100% assistance</span>
               </div>
-            </a>
-            
-            <a href="#fee-estimator" className="banner-announcement-item">
-              <span className="bell-icon">🔔</span>
-              <div className="ann-details">
-                <h4>Term Fee Estimator Tool</h4>
-                <p>Calculate branch-wise tuition, registration, books, and hostel estimates.</p>
+              <div className="highlight-item">
+                <span className="highlight-icon">🔬</span>
+                <span>State-of-the-art labs and smart classrooms</span>
               </div>
-            </a>
-
-            <a href="#booking" className="banner-announcement-item">
-              <span className="bell-icon">🔔</span>
-              <div className="ann-details">
-                <h4>Important Intake Guidelines</h4>
-                <p>Verify seat allocations, reservation rosters, and payment date circulars.</p>
+              <div className="highlight-item">
+                <span className="highlight-icon">🎓</span>
+                <span>Merit-based scholarships up to 50%</span>
               </div>
+            </div>
+            <a href="#enquiry-form" className="btn btn-accent poster-btn">
+              Apply Online Now <span className="btn-arrow">➔</span>
             </a>
           </div>
         </div>
@@ -506,7 +503,7 @@ export default function Admissions() {
       </section>
 
       {/* Enquiry Form Section */}
-      <section className="section-padding">
+      <section id="enquiry-form" className="section-padding">
         <div className="container">
           <div className="text-center">
             <h2 className="section-title center">Online Enquiry Form</h2>
