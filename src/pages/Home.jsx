@@ -159,7 +159,7 @@ export default function Home() {
               <p className="hero-desc">{slide.desc}</p>
               <div className="hero-actions">
                 <Link to="/admissions" className="btn btn-accent">Apply Today</Link>
-                <Link to="/about" className="btn btn-outline-white">Explore Campus</Link>
+                <Link to="/facilities" className="btn btn-outline-white">Explore Campus</Link>
               </div>
             </div>
           </div>

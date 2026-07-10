@@ -343,7 +343,7 @@
 }
 
 /* Mobile Responsive Styling */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .header-container {
     height: 95px;
     position: relative;

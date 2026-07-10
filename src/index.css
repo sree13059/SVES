@@ -452,9 +452,8 @@ a {
 
 /* ==========================================
    Centralized Responsive Hero Banner Images
-   (About, Academics, Admissions, Placements, Facilities, Faculties, Gallery, Contact)
+   (Academics, Admissions, Placements, Facilities, Faculties, Gallery, Contact)
    ========================================== */
-.about-hero,
 .academics-hero,
 .admissions-hero,
 .placements-hero,
@@ -472,7 +471,6 @@ a {
 
 /* Large Tablets / Laptops */
 @media (max-width: 1024px) {
-  .about-hero,
   .academics-hero,
   .admissions-hero,
   .placements-hero,
@@ -483,7 +481,6 @@ a {
     padding: 5rem 0;
   }
 
-  .about-hero p,
   .academics-hero p,
   .admissions-hero p,
   .placements-hero p,
@@ -499,7 +496,6 @@ a {
 
 /* Tablets / Mobile Screens */
 @media (max-width: 768px) {
-  .about-hero,
   .academics-hero,
   .admissions-hero,
   .placements-hero,
@@ -510,7 +506,6 @@ a {
     padding: 4rem 0;
   }
 
-  .about-hero p,
   .academics-hero p,
   .admissions-hero p,
   .placements-hero p,
@@ -526,7 +521,6 @@ a {
 
 /* Small Mobile Screens */
 @media (max-width: 480px) {
-  .about-hero,
   .academics-hero,
   .admissions-hero,
   .placements-hero,
@@ -537,7 +531,6 @@ a {
     padding: 3rem 0;
   }
 
-  .about-hero p,
   .academics-hero p,
   .admissions-hero p,
   .placements-hero p,

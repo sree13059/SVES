@@ -368,6 +368,11 @@
 
 .testimonial-card {
   position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   text-align: center;

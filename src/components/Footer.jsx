@@ -45,7 +45,6 @@ export default function Footer() {
             <h4 className="footer-title">Quick Links</h4>
             <ul className="footer-links">
               <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About Us</Link></li>
               <li><Link to="/academics">Academics</Link></li>
               <li><Link to="/admissions">Admissions</Link></li>
               <li><Link to="/gallery">Gallery</Link></li>
