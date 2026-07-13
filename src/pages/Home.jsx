@@ -54,6 +54,29 @@ const VALUES = [
   }
 ]
 
+const GOVERNING_BODY = [
+  {
+    role: 'Chairperson',
+    focus: 'Strategic Leadership',
+    desc: 'Guides the long-term vision of SVES and ensures every institution works toward academic excellence with strong values.'
+  },
+  {
+    role: 'Secretary & Correspondent',
+    focus: 'Institutional Coordination',
+    desc: 'Coordinates administration, compliance, communication, and day-to-day governance across the SVES institutions.'
+  },
+  {
+    role: 'Treasurer',
+    focus: 'Financial Stewardship',
+    desc: 'Oversees responsible financial planning, resource allocation, and transparent institutional development.'
+  },
+  {
+    role: 'Academic Advisor',
+    focus: 'Quality Enhancement',
+    desc: 'Supports curriculum growth, student outcomes, faculty development, and continuous academic improvement.'
+  }
+]
+
 const TESTIMONIALS = [
   {
     quote: 'SVES has been instrumental in shaping my child\'s confidence and academic growth. The teachers go above and beyond to support individual learning needs. The holistic environment is truly outstanding.',
@@ -247,6 +270,35 @@ export default function Home() {
                 <span className="sig-title">Principal, SVES Educational Academy</span>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Governing Body Section */}
+      <section className="section-padding governing-section">
+        <div className="container">
+          <div className="governing-header">
+            <span className="governing-kicker">Leadership & Administration</span>
+            <h2 className="section-title center">GOVERNING BODY</h2>
+            <p>
+              The SVES governing body provides steady leadership, transparent administration,
+              and academic direction for the continued growth of our institutions.
+            </p>
+          </div>
+
+          <div className="governing-grid">
+            {GOVERNING_BODY.map((member, idx) => (
+              <article key={idx} className="governing-card">
+                <div className="governing-avatar" aria-hidden="true">
+                  {member.role.charAt(0)}
+                </div>
+                <div className="governing-card-content">
+                  <span className="governing-focus">{member.focus}</span>
+                  <h3>{member.role}</h3>
+                  <p>{member.desc}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
