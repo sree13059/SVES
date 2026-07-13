@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { apiUrl } from '../lib/api'
+import { apiUrl, getAssetUrl } from '../lib/api'
 import './Home.css'
 
 const HERO_SLIDES = [
@@ -368,7 +368,14 @@ export default function Home() {
             {upcomingEvents.map((event, idx) => (
               <div key={idx} className="event-card">
                 <div className="event-img-wrapper">
-                  <img src={event.image} alt={event.title} className="event-img" />
+                  <img
+                    src={getAssetUrl(event.image)}
+                    alt={event.title}
+                    className="event-img"
+                    onError={(e) => {
+                      e.currentTarget.src = DEFAULT_UPCOMING_EVENTS[idx % DEFAULT_UPCOMING_EVENTS.length].image
+                    }}
+                  />
                   <div className="event-date-badge">
                     <span style={{ display: 'block', fontSize: '1.25rem' }}>{event.day}</span>
                     <span>{event.month}</span>
